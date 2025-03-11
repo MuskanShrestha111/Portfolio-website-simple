@@ -4,32 +4,33 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 
 
+
 const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    ),
-  },
   {
     title: "Education",
     id: "education",
     content: (
       <ul>
         <li>+2</li>
-        <li>Bachelors (5th sem)</li>
+        <li>BSc.CSIT (5th)</li>
+       
+      </ul>
+    ),
+  },
+  {
+    title: "Hobbies",
+    id: "hobbies",
+    content: (
+      <ul>
+        <li>coding</li>
+        
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("education");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -56,16 +57,16 @@ const AboutSection = () => {
        
           <div className="flex flex-row justify-start mt-8">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
-            <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
               Education
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("hobbies")}
+              active={tab === "hobbies"}
+            >
+              Hobbies
             </TabButton>
           </div>
 

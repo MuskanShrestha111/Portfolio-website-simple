@@ -25,28 +25,29 @@ const HeroSection = () => {
             I study CSIT. I love learning.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-amber-100 text-black">
-              Hire Me
+            <Link href="/skills">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-amber-100 text-black" aria-label="My skills">
+              My skills
             </button>
+            </Link>
 
-            
             <Link href="/cv">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-transparent hover:bg-green-800 border border-white mt-3">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-transparent hover:bg-green-800 border border-white mt-3" aria-label="View CV">
                 View CV
               </button>
             </Link>
           </div>
         </div>
 
-      
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
           <div className="rounded-full bg-[#181818] flex flex-col w-[300px] h-[350px] lg:w-[300px] lg:h-[350px] relative">
-            <img
+            <Image
               src="/images/image.png"
               alt="image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={200}
               height={200}
+              layout="intrinsic"
             />
           </div>
         </div>

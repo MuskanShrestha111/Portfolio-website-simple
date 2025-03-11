@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen flex justify-center items-center bg-black">
+    <div id="contact" className="min-h-screen flex justify-center items-center bg-black relative">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-3xl font-semibold text-center text-gray-200 mb-6">Contact Me</h1>
 
@@ -74,7 +75,16 @@ const Contact = () => {
           >
             Submit
           </button>
+
         </form>
+        
+      </div>
+      <div className="absolute top-4 right-4">
+        <Link href="/">
+          <button className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-full hover:bg-green-800 hover:text-white transition duration-300">
+            Back 
+          </button>
+        </Link>
       </div>
     </div>
   );

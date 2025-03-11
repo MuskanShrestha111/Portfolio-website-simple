@@ -3,7 +3,7 @@ import { Container } from "postcss";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
-import Contact from './components/Contact';
+
 
 import Footer from "./components/Footer";
 
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       
         <AboutSection/>
-        <Contact/>
+        
         <Footer/>
    
         
